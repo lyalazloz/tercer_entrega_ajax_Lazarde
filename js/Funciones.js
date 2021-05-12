@@ -1,7 +1,5 @@
 import * as Vari from "./Variables.js"
 
-import * as Guardar from "./Storage.js"
-
 export function captura_y_proceso_de_datos(){
     let boton = $('#btnConvertir');
     
@@ -58,25 +56,23 @@ export function ajax(){
     ajax.open("GET", "dato.json");
     ajax.addEventListener("load", procesarRespuestaServidor);
     ajax.send(); 
-    }
+    
+}
     
     function procesarRespuestaServidor(e){
     const ajax = e.target; 
     let novedad = JSON.parse(ajax.response);
 
-    for (let unidad in novedad){
-        
-        const ul = document.getElementById("consultarTabla");
-        let li = document.createElement("li");
-        li = (" 1 " + novedad[unidad].nombre_medida + " equivale(n) a " + novedad[unidad].valor_base + " " + novedad[unidad].nombre_medida_base)
-        
-        $("#consultarTabla").prepend(`<li> ${li}</li>`);
-        
-    }
-    
+        for (let unidad in novedad){
+            
+            const ul = document.getElementById("consultarTabla");
+            let li = document.createElement("li");
+            li = (" 1 " + novedad[unidad].nombre_medida + " equivale(n) a " + novedad[unidad].valor_base + " " + novedad[unidad].nombre_medida_base)
+            
+            $("#consultarTabla").prepend(`<li> ${li}</li>`);
+            
+        }
 
     }
 }
- 
-// let convertido =  (" 1 " + novedad[unidad].nombre_medida + " equivale(n) a " + novedad[unidad].valor_base + " " + novedad[unidad].nombre_medida_base);  
-        
+         

@@ -11,12 +11,3 @@ Guardar.unidad_parseada()
 
 Funciones.animacion()
 Funciones.ajax()
-
-
-
-
-
-
-
-
-///document.body.appendChild(img);
