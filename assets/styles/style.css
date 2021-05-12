@@ -57,17 +57,6 @@ select{
     height: 38px;
 }
 
-#consultarTabla{
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-
-}
-
-img {
-    width: 55%;
-}
-
 
 footer{
     position: absolute;
@@ -88,3 +77,7 @@ footer{
     text-align: center;
 }
 
+#btn-container {
+    flex-wrap: nowrap;
+    justify-content: center;
+}

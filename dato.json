@@ -1,0 +1,26 @@
+[
+    {
+        "nombre_medida": "mililitros",
+        "valor_medida": 1,
+        "valor_base": 1,
+        "nombre_medida_base": "mililitros"
+    },
+    {
+        "nombre_medida": "litros",
+        "valor_medida": 1,
+        "valor_base": 1000,
+        "nombre_medida_base": "mililitros"
+    },
+    {
+        "nombre_medida": "tazas",
+        "valor_medida": 1,
+        "valor_base": 250,
+        "nombre_medida_base": "mililitros"
+    },
+    {
+        "nombre_medida": "cucharadas",
+        "valor_medida": 1,
+        "valor_base": 15,
+        "nombre_medida_base": "mililitros"
+    }
+]
