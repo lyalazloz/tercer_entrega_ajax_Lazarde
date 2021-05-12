@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b1b4bd;
+    background-color: #323a45;
+}
+
+div h1, h2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#encabezado {
+    display: block;
+    margin: auto;
+    padding: 5%;
+    text-align: center;   
+}
+
+#resultado h3 {
+    justify-content: space-evenly;
+    color: rgb(207, 207, 230);
+    background-color: black;
+    padding: 3px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#listas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    max-width: 95%;
+    position: relative;
+    left: -1000px;
+}
+
+.row>* {
+    margin: 15px;
+    flex-shrink: 0;
+    max-width: 90%;
+}
+
+select{
+    border-radius: 5px;
+    height: 38px;
+}
+
+#consultarTabla{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+img {
+    width: 55%;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.copyright {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-bottom: 15px;
+    margin: auto;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1rem;
+    text-align: center;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../assets/img/ok-tributario-fav-icon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/f5f8e329f7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <div id="titulo" class="container col-6 mb-5"></div>
+    <div  id= "caja" class= "col-9" > 
+        <div id= "listas" class="container form-group" >
+            <div class="row">                
+                <input id="input" type="Float" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Nº a Convertir">
+            </div>
+            <div class="row">
+                <select id="medida_ini" name="medida_ini" class="custom-select form-control form-select-sm">
+                    <option selected>De</option>
+                    <option value="mililitros">Mililitros</option>
+                    <option value="cucharadas">Cucharadas</option>
+                    <option value="tazas">Tazas</option>
+                    <option value="litros">Litros</option>
+                </select>
+            </div>
+            <div class="row">
+                <select id="medida_fin" name="medida_fin" class="custom-select form-control form-select-sm">
+                    <option selected>a</option>
+                    <option value="mililitros">Mililitros</option>
+                    <option value="cucharadas">Cucharadas</option>
+                    <option value="tazas">Tazas</option>
+                    <option value="litros">Litros</option>
+                </select>
+            </div>
+            <div class="row">
+                <button id="btnConvertir" type="button" class="btn btn-secondary">Convertir</button>
+            </div>                          
+        </div>
+        <div id="resultado">
+            <div class="resultado"></div>
+        </div>  
+    
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col" id="consultarTabla">
+            <button id="btnConsultar">Consultar Tabla de Coversión</button>
+
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+      </div>
+
+ 
+    <footer>
+        <p class="copyright"> Diseñado con <i class="fa fa-heart"></i> por @Lyalazloz
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="module" src="./js/apps.js"></script>
+</body>
+</html> 
