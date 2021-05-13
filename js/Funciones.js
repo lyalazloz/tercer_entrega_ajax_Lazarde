@@ -1,5 +1,6 @@
 import * as Vari from "./Variables.js"
 
+
 export function captura_y_proceso_de_datos(){
     let boton = $('#btnConvertir');
     
@@ -7,19 +8,22 @@ export function captura_y_proceso_de_datos(){
         let medida_ini = $("#medida_ini").val();        
         let medida_fin = $("#medida_fin").val();
         let valor = $("#input").val();
+        let unidades_de_volumen = Vari.unidades_de_volumen  
+        medida_ini = comparar(medida_ini, unidades_de_volumen)
+        medida_fin = comparar(medida_fin, unidades_de_volumen) 
+        console.log(medida_ini, typeof(medida_ini)) 
 
-        let Objeto1 = Vari.unidades_de_volumen.map(function(unidad_de_volumen){
-            if (unidad_de_volumen.obtener_nombre_medida == medida_ini){
-                medida_ini = unidad_de_volumen;                 
+        function comparar(medida_html, unidades_de_medida){ 
+            for (let unidad in unidades_de_medida){
+                if (unidades_de_medida[unidad].nombre_medida == medida_html) {                    
+                    medida_html = unidades_de_medida[unidad];
+                    return medida_html;
+                }
             }
-        })
-    
-        let Objeto2 = Vari.unidades_de_volumen.map(function(unidad_de_volumen){
-            if (unidad_de_volumen.obtener_nombre_medida == medida_fin){
-                medida_fin = unidad_de_volumen;               
-            }
-        })
-        
+          
+        }        
+
+
         let convertido =  (valor + " " + medida_ini.obtener_nombre_medida + " equivale(n) a " + medida_ini.convertir_a(medida_fin, valor) + " " + medida_fin.obtener_nombre_medida);  
         
                
@@ -29,7 +33,9 @@ export function captura_y_proceso_de_datos(){
         
 }
 
+
 export function guardarLocal(clave, valor) { localStorage.setItem(clave, valor) };
+
 
 export function animacion(){
 
@@ -42,6 +48,7 @@ export function animacion(){
     });
        
 }
+
 
 export function ajax(){
         
@@ -58,8 +65,9 @@ export function ajax(){
     ajax.send(); 
     
 }
+
     
-    function procesarRespuestaServidor(e){
+function procesarRespuestaServidor(e){
     const ajax = e.target; 
     let novedad = JSON.parse(ajax.response);
 
@@ -72,7 +80,5 @@ export function ajax(){
             $("#consultarTabla").prepend(`<li> ${li}</li>`);
             
         }
-
     }
-}
-         
+}   

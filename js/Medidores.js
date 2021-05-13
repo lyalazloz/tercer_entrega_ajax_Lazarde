@@ -1,3 +1,5 @@
+///creación de clase padre
+
 class Medidor {
 
     constructor(nombre_medida, valor_base) {
@@ -27,6 +29,7 @@ class Medidor {
         return this.nombre_medida_base;
     } 
     
+    ///convierte la medida ingresada, a la medida usada como base
     convertirBase(nombre_medida, valor_medida) {       
         if (this.nombre_medida == this.nombre_medida_base) {
             let base = this.valor_medida
@@ -38,19 +41,16 @@ class Medidor {
         }
     }
 
+    ///convierte las unidades (ya transformadas en medida base) a la unidad deseada
     convertir_a (medida_fin, valor) {
         let medida_ini = this.obtener_nombre_medida
         let transformacion = ((this.convertirBase (medida_ini) / medida_fin.convertirBase())) * valor
         return transformacion
     }
     
-    comparar (medida_html) {
-        if (medida_html == this.obtener_nombre_medida) {
-            let medida_html = this.obtener_nombre_medida
-            return medida_html
-        }
-    }
 }
+
+///creacion de clases herederas
 
 export class Medidor_de_Volumen extends Medidor {
     constructor(nombre_medida, valor_medida, valor_base) {
@@ -62,7 +62,7 @@ export class Medidor_de_Volumen extends Medidor {
 export class Medidor_de_Peso extends Medidor {
     constructor(nombre_medida, valor_medida, valor_base) {
         super(nombre_medida, valor_medida, valor_base);
-        this.nombre_medida_base = "miligramos"
+        this.nombre_medida_base = "gramos"
     }
 }
 
@@ -72,4 +72,3 @@ export class Medidor_de_Temperatura extends Medidor {
         this.nombre_medida_base = "centígrados"
     }
 }
-
